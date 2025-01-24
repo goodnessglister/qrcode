@@ -1,0 +1,4 @@
+virtualenv
+static/qrcodes
+__pycache__
+*.png

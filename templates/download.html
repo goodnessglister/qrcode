@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>QR Code Generator</title>
+		<link rel="stylesheet" href="../static.css">
+	</head>
+	<body>
+		<header>
+			<h1>Your QR Code</h1>
+			{{name}}
+		</header>
+	<div class="container">
+		<div class="form-container">
+			<img src='{{file_name}}' alt="QR Code" style="width:300px;height:300px;"/>
+		
+			
+	
+		</div>
+		<div class="button-conatainer">
+			<span><a href="/" class="Cancel">Cancel</a></span>
+			<span><a href="{{file_name}}" class="download">Download</a></span>
+		</div>
+	</div>
+	
+		
+	</body>
+
+</html>
+

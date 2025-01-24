@@ -1,0 +1,19 @@
+start by creating a virtual environment
+
+    python -m venv virtualenv
+
+activate the virtual environment depending on your machine
+
+mac: source {nameof virtual environment}/bin/activate
+windows : ./{nameof virtual environment}/scripts/activate
+
+
+install the requirements.txt
+
+ 
+ then run the main.python
+  
+  python main.py
+
+
+ 

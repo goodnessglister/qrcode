@@ -1,0 +1,106 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    color: #f1faee;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #a8dadc;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Form container */
+form {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Input fields */
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border: 2px solid #a8dadc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    color: #1d3557;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #f4a261;
+    box-shadow: 0px 0px 8px rgba(244, 162, 97, 0.8);
+    outline: none;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #d62828;
+    transform: scale(1.05);
+}
+
+input[type="submit"]:active {
+    transform: scale(0.95);
+    background-color: #c1121f;
+}
+
+/* Form container hover animation */
+form:hover input[type="submit"] {
+    box-shadow: 0px 8px 20px rgba(230, 57, 70, 0.6);
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
