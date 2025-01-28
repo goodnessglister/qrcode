@@ -7,6 +7,7 @@
 """
 import tempfile
 import uvicorn
+import qrcode
 from fastapi import FastAPI,Request,Form,File,UploadFile
 #Using it as a middleware to pass html response
 from fastapi.responses import HTMLResponse

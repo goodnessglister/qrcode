@@ -1,0 +1,7 @@
+Install this modules
+Fastapi
+Jinja2
+Qrcode
+Uvicorn
+Pillow
+Python-multipart
