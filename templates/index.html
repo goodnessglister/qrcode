@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, intitial-scale=1.0">
-    <title>Sidebar Menu</title>
+    <title>QR Code Generator</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../static/styleobed.css">
 </head>
@@ -17,7 +17,7 @@
             <span class="shrink-btn">
                 <i class='bx bx-chevron-left'></i>
             </span>
-            <img src="./img/logo.png" class="logo" alt="">
+            <img src="../img/logo.png" class="logo" alt="">
             <h3 class="hide">Aqumex</h3>
         </div>
 
@@ -124,7 +124,7 @@
             </a>
             <div class="admin-user tooltip-element" data-tooltip="1">
                 <div class="admin-profile">
-                    <img src="./img/face-1.png" alt="">
+                    <img src="../img/face-1.png" alt="">
                     <div class="admin-info">
                         <h3>Uwaifo Obed</h3>
                         <h5>Admin</h5>
@@ -151,16 +151,18 @@
             justo. Nullam dictum felis eu pede mollis pretium.
         </p> -->
 
-        <form action='/createqr' method='POST' class="form">
-            <input type='text' placeholder='enter your link' name='link'/>
-            <input type='submit' value='Generate QR'/>
+
+        <form action="/createqr" method="POST" class="form-container">
+            <input type="text" placeholder="Input the link" name="link" class="qr_input"/>
+            <input type="submit" value="Generate QR Code" class="sub"/>
         </form>
+        
 
         <p class="copyright">
             &copy; 2025 - <span>Aqumex</span> All Rights Reserved.
         </p>
     </main>
-    <script src="app.js"></script>
+    <script src="../static/app.js"></script>
 </body>
 
 </html>

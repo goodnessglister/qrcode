@@ -42,7 +42,7 @@ async def home(request:Request):
 	* method : home
 	* description : Route to load the home page of our app
 	"""
-	return templates.TemplateResponse('home.html',{'request':request,'name':'QR CODE GENERATOR'})
+	return templates.TemplateResponse('index.html',{'request':request,'name':'QR CODE GENERATOR'})
 
 """ @app.get('/createqr')
 async def createqr(file: UploadFile = File(...)):

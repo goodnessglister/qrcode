@@ -79,6 +79,87 @@ main .copyright span{
     cursor: pointer;
 }
 
+/*Css for qrcode Input form*/
+/* Reset some default browser styles */
+.form-container{
+    height: 15%;
+    border-radius: 50px;
+    padding: 10px;
+    width: 50%;
+    max-width: 500px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+}
+
+.qr_input{
+    background-color: #fff;
+}
+
+.sub{
+    background-color: var(--main-color-dark);
+    color: var(--text-color);
+}
+
+input.qr_input, 
+input.sub{
+    margin: 10px 30px;
+    border: none;
+    height: 50%;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.qr_input::placeholder{
+    color: var(--text-color);
+}
+
+/* Form container styling */
+
+.cancel{
+    background-color: var(--main-color);
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.download{
+    background-color: var(--main-color);
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.button-container{
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px 20px;
+    }
+
+    header {
+        font-size: 1.5rem;
+    }
+}
+
+
 .sidebar-top{
     position: relative;
     display: flex;
