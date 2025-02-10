@@ -6,12 +6,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, intitial-scale=1.0">
-    <title>QR Code Generator</title>
+    <title>Upload</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../static/styleobed.css">
+    <link rel="stylesheet" href="../static/styleqrcode.css">
+    <link rel="stylesheet" href="../static/styleupload.css">
 </head>
 
-<body>
+<body class="body-qrcode">
     <nav>
         <div class="sidebar-top">
             <span class="shrink-btn">
@@ -30,7 +31,7 @@
             <ul>
                 <div class="active-tab"></div>
                 <li class="tooltip-element" data-tooltip="0">
-                    <a href="#" class="active" data-active="0">
+                    <a href="file:///C:/Users/OBED/test-dir/qrcode/templates/qrcode.html" data-active="0">
                         <div class="icon">
                             <i class='bx bx-tachometer' ></i>
                             <i class='bx bxs-tachometer'></i>
@@ -40,12 +41,12 @@
                 </li>
 
                 <li class="tooltip-element" data-tooltip="1">
-                    <a href="#" data-active="1">
+                    <a href="file:///C:/Users/OBED/test-dir/qrcode/templates/upload.html#" class="active" data-active="1">
                         <div class="icon">
                             <i class='bx bx-folder' ></i>
                             <i class='bx bxs-folder' ></i>
                         </div>
-                        <span class="link hide">Project</span>
+                        <span class="link hide">Upload</span>
                     </a>
                 </li>
 
@@ -142,25 +143,57 @@
     </nav>
 
     <main>
-        <h1>QR Code</h1>
-        <!-- <p class="text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam 
-            felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, 
-            fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, 
-            justo. Nullam dictum felis eu pede mollis pretium.
-        </p> -->
-
-
-        <form action="/createqr" method="POST" class="form-container">
-            <input type="text" placeholder="Input the link" name="link" class="qr_input"/>
-            <input type="submit" value="Generate QR Code" class="sub"/>
-        </form>
+        <div class="upload-form">
+            <form class="dropzone-box body-upload">
+                <h2>Upload File</h2>
+                <p>Click to upload or drag and drop</p>
+                <div class="dropzone-area" role="region" aria-live="polite">
+                    <label for="upload-file" class="file-upload-icon" aria-hidden="true">
+                        <!-- svg -->
+                        <img src="../img/upload.svg" alt="" class="svg">
+                    </label>
+                    <input 
+                        type="file" required multiple id="upload-file"
+                        name="uploaded-file" accept="image/*"
+                        aria-describedby="file-info"
+                    >
+                    <div id="file-info" class="file-info">
+                        <p>No Files Selected</p>
+                    </div>
+                </div>
+    
+                <div class="dropzone-description">
+                    <span>Supported formats: JPEG, JPG, PNG, ...</span>
+                    <span>Max file size: 25MB</span>
+                </div>
+    
+                <div class="dropzone-actions">
+                    <div class="dropzone-help">
+                        <!-- svg -->
+                        <img src="../img/question mark.svg" alt="" class="svg">
+                        Help Center
+                    </div>
+                    <div class="actions-buttons">
+                        <button type="reset" aria-label="Cancel file selection">
+                            Cancel
+                        </button>
+                        <button
+                            id="submit-button" type="submit"
+                            aria-label="Upload selected files"
+                        >
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
         
-
-        <p class="copyright">
-            &copy; 2025 - <span>Aqumex</span> All Rights Reserved.
-        </p>
+        
+        <footer class="main footer">
+            <p class="copyright">
+                &copy; 2025 - <span>Aqumex</span> All Rights Reserved.
+            </p>
+        </footer>
     </main>
     <script src="../static/app.js"></script>
 </body>
