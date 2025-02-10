@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Install this modules
 Fastapi
 Jinja2
@@ -5,3 +6,16 @@ Qrcode
 Uvicorn
 Pillow
 Python-multipart
+=======
+fastapi
+uvicorn
+tempfile
+Jinja2Templates
+
+opencv-python
+pytube
+pdf2docx
+fpdf
+yt_dlp
+python-multipart
+>>>>>>> a79f110 (Updated version after completing functions)

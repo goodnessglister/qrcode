@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload & Process Image</title>
+</head>
+<body>
+    <h2>Upload Image for Processing</h2>
+    <input type="file" id="fileInput">
+    <button onclick="uploadImage()">Upload & Download</button>
+
+    <script>
+        async function uploadImage() {
+            let fileInput = document.getElementById('fileInput').files[0];
+            if (!fileInput) {
+                alert("Please select an image.");
+                return;
+            }
+
+            let formData = new FormData();
+            formData.append("file", fileInput);
+
+            let response = await fetch("http://127.0.0.1:8000/compress/", {
+                method: "POST",
+                body: formData
+            });
+
+           /*  // Create a download link
+            let blob = await response.blob();
+            let downloadLink = document.createElement("a");
+            downloadLink.href = window.URL.createObjectURL(blob);
+            downloadLink.download = "processed_image.png";
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink); */
+        }
+    </script>
+</body>
+</html>
